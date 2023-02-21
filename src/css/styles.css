@@ -2,6 +2,7 @@
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
   font-weight: 300;
+
   --light-gray: #f6f6f6;
   --medium-gray: #c1c1c3;
   --dark: #d0cdcd;
@@ -25,16 +26,14 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   border-radius: 3px;
-  box-shadow: 0px 2px 8px rgb(0 0 0 / 15%);
-  margin: 0px auto;
-  top: 0px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  margin: 0 auto;
+  top: 0;
   max-width: 500px;
   width: 100%;
-
-  -webkit-transition: margin 300ms ease-in-out;
   transition: margin 300ms ease-in-out;
   position: relative;
-  min-width: 0px;
+  min-width: 0;
 }
 
 .todos .todo-button {
@@ -57,7 +56,7 @@ body {
 .todos .todo-wrapper .todo-item {
   width: 100%;
   display: flex;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgb(0 0 0 / 8%);
 }
 
 .todo-item .item-wrapper {
@@ -72,6 +71,12 @@ body {
 
 .todo-item .todo .todo-check {
   padding: 0 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
 }
 
 .todo-item .todo .todo-check .checkmark {
@@ -118,33 +123,17 @@ body {
   align-items: center;
 }
 
-.todo-check {
-  display: flex;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .todo-check input {
   display: none;
 }
 
-.checkmark:after {
+.checkmark::after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.todo-check input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.todo-check .checkmark:after {
+.todo-check .checkmark::after {
   left: 7px;
   top: 3px;
   width: 4px;
@@ -152,7 +141,9 @@ body {
   position: absolute;
   border: solid var(--black);
   border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.todo-check input:checked ~ .checkmark::after {
+  display: block;
 }
