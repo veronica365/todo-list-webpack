@@ -1,7 +1,8 @@
 * {
+  font-size: 16px;
+  font-weight: 300;
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
-  font-weight: 300;
 
   --light-gray: #f6f6f6;
   --medium-gray: #c1c1c3;
@@ -15,6 +16,10 @@ body {
   display: flex;
   align-items: center;
   background-color: var(--light-gray);
+}
+
+h1 {
+  font-weight: 600;
 }
 
 .link {
@@ -42,6 +47,19 @@ body {
   padding: 20px 5%;
 }
 
+.todos .todo-head {
+  height: 50px;
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+  background-color: var(--light-gray);
+  border-bottom: 1px solid rgb(0 0 0 / 8%);
+}
+
+.todos .todo-head .icon {
+  margin-left: auto;
+}
+
 .todos .todo-button span {
   width: 100%;
   text-align: center;
@@ -51,6 +69,37 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.todos .add-task {
+  width: 100%;
+  height: 50px;
+  padding-right: 15px;
+  background-color: var(--white);
+}
+
+.todos .add-task,
+.todos .add-task label,
+.todos .add-task label input {
+  width: 100%;
+  outline: none;
+  border: none;
+  display: flex;
+}
+
+.todos .add-task label {
+  padding: 6px 0;
+  background-color: var(--white);
+  border-bottom: 1px solid rgb(0 0 0 / 8%);
+}
+
+.todos .add-task label button {
+  border: none;
+  background-color: var(--white);
+}
+
+.todos .add-task label input {
+  padding-left: 15px;
 }
 
 .todos .todo-wrapper .todo-item {
@@ -77,6 +126,10 @@ body {
   cursor: pointer;
   font-size: 22px;
   user-select: none;
+}
+
+.todo-item .todo .todo-check input {
+  display: none;
 }
 
 .todo-item .todo .todo-check .checkmark {
@@ -121,10 +174,6 @@ body {
   margin-right: 15px;
   position: relative;
   align-items: center;
-}
-
-.todo-check input {
-  display: none;
 }
 
 .checkmark::after {
