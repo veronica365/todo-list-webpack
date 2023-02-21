@@ -1,4 +1,4 @@
-import { generateTodos } from "./modules/components";
-import "./css/styles.css";
+import { generateTodos } from './modules/components.js';
+import './css/styles.css';
 
-document.querySelector(".todo-wrapper").innerHTML = generateTodos();
+document.querySelector('.todo-wrapper').innerHTML = generateTodos();

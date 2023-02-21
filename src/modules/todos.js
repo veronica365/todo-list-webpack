@@ -1,32 +1,39 @@
-export const todos = [
+const todos = [
   {
-    id: 1,
-    todo: "wash the dishes",
+    index: 1,
     selected: false,
+    completed: false,
+    description: 'wash the dishes',
   },
   {
-    id: 2,
-    todo: "complete To Do list project",
+    index: 2,
     selected: false,
+    completed: false,
+    description: 'complete To Do list project',
   },
   {
-    id: 3,
-    todo: "wash the dishes",
+    index: 3,
     selected: false,
+    completed: false,
+    description: 'wash the dishes',
   },
   {
-    id: 4,
-    todo: "complete To Do list project",
+    index: 4,
     selected: false,
+    completed: false,
+    description: 'complete To Do list project',
   },
   {
-    id: 5,
-    todo: "wash the dishes",
+    index: 5,
     selected: false,
+    completed: false,
+    description: 'wash the dishes',
   },
   {
-    id: 6,
-    todo: "complete To Do list project",
+    index: 6,
     selected: false,
+    completed: true,
+    description: 'complete To Do list project',
   },
 ];
+export default todos;

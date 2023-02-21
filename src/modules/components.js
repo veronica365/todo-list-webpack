@@ -1,8 +1,8 @@
-import { todos } from "./todos.js";
-console.log(todos);
+import todos from './todos.js';
 
-export const createTodo = (todo) => {
-  return `<article class="todo-item">
+export const createTodo = (task) => {
+  const completed = task.completed ? ' completed' : '';
+  return `<article class="todo-item${completed}">
                 <div class="item-wrapper">
                     <div class="todo">
                         <label class="todo-check">
@@ -10,7 +10,7 @@ export const createTodo = (todo) => {
                             <span class="checkmark"></span>
                         </label>
                         <span class="todo-title">
-                            ${todo}
+                            ${task.description}
                         </span>
                     </div>
                     <div class="more">
@@ -45,9 +45,9 @@ export const createTodo = (todo) => {
 };
 
 export const generateTodos = () => {
-  let innerHTML = "";
-  for (let tag = 0; tag < todos.length; tag++) {
-    innerHTML += `${createTodo(todos[tag].todo)}`;
-  }
+  let innerHTML = '';
+  todos.forEach((todo) => {
+    innerHTML += `${createTodo(todo)}`;
+  });
   return innerHTML;
 };

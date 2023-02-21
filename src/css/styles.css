@@ -74,13 +74,28 @@ body {
   padding: 0 15px;
 }
 
-.todo-item .todo .todo-check input {
-  border: 2px solid var(--medium-gray);
+.todo-item .todo .todo-check .checkmark {
+  width: 22px;
+  height: 22px;
+  display: block;
+  position: relative;
+  border: 1.5px solid var(--medium-gray);
 }
 
 .todo-item .todo .todo-title {
   line-height: 25px;
   padding: 12px 0;
+}
+
+.todo-item.completed .todo .todo-title {
+  padding: 12px 0;
+  line-height: 25px;
+  color: var(--dark);
+  text-decoration: line-through;
+}
+
+.todo-item.completed .todo .todo-check .checkmark {
+  border-color: var(--dark);
 }
 
 .todo-item .more .move,
@@ -117,14 +132,6 @@ body {
 
 .todo-check input {
   display: none;
-}
-
-.checkmark {
-  width: 22px;
-  height: 22px;
-  display: block;
-  position: relative;
-  border: 1.5px solid var(--medium-gray);
 }
 
 .checkmark:after {
