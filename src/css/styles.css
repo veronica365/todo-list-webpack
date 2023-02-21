@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  --light-gray: #f6f6f6;
+  --medium-gray: #c1c1c3;
+  --dark: #d0cdcd;
+  --black: #000;
+  --white: #fff;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--light-gray);
+}
+
+.link {
+  cursor: pointer;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0px 2px 8px rgb(0 0 0 / 15%);
+  margin: 0px auto;
+  top: 0px;
+  max-width: 500px;
+  width: 100%;
+
+  -webkit-transition: margin 300ms ease-in-out;
+  transition: margin 300ms ease-in-out;
+  position: relative;
+  min-width: 0px;
+}
+
+.todos .todo-button {
+  display: flex;
+  align-items: center;
+  padding: 20px 5%;
+}
+
+.todos .todo-button span {
+  width: 100%;
+  text-align: center;
+}
+
+.todos .todo-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.todos .todo-wrapper .todo-item {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.todo-item .item-wrapper {
+  display: flex;
+  width: 100%;
+  background: var(--white);
+}
+
+.todo-item .todo {
+  display: flex;
+}
+
+.todo-item .todo .todo-check {
+  padding: 0 15px;
+}
+
+.todo-item .todo .todo-check input {
+  border: 2px solid var(--medium-gray);
+}
+
+.todo-item .todo .todo-title {
+  line-height: 25px;
+  padding: 12px 0;
+}
+
+.todo-item .more .move,
+.todo-item .more .delete {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.todo-item .more .move {
+  display: none;
+}
+
+.todo-item .more {
+  right: 0;
+  display: flex;
+  margin-left: auto;
+  margin-right: 15px;
+  position: relative;
+  align-items: center;
+}
+
+.todo-check {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.todo-check input {
+  display: none;
+}
+
+.checkmark {
+  width: 22px;
+  height: 22px;
+  display: block;
+  position: relative;
+  border: 1.5px solid var(--medium-gray);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.todo-check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.todo-check .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 4px;
+  height: 9px;
+  position: absolute;
+  border: solid var(--black);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
