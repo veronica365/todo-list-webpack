@@ -100,6 +100,7 @@ h1 {
 
 .todos .add-task label input {
   padding-left: 15px;
+  font-style: italic;
 }
 
 .todos .todo-wrapper .todo-item {
