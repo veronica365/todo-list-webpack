@@ -1,4 +1,4 @@
-import { generateTodos } from './modules/components.js';
+import { initialize } from './modules/paint-ui.js';
 import './css/styles.css';
 
-document.querySelector('.todo-wrapper').innerHTML = generateTodos();
+initialize();
