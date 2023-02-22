@@ -22,7 +22,7 @@ export const createNewTodo = (description) => {
     description,
     selected: false,
     completed: false,
-    index: todos.length + 1,
+    index: new Date().getTime(),
   };
   todos.push(newTodo);
   html.innerHTML += returnTodo(newTodo);
@@ -42,6 +42,11 @@ export const addTodo = () => {
   });
 };
 
+export const removeTodo = (event) => {
+  const article = event.parentElement.parentElement.parentElement;
+  article.remove();
+};
+
 export const submitTodo = (event) => {
   event.preventDefault();
   const input = getTodoInput();
@@ -57,3 +62,5 @@ export const initialize = () => {
   document.querySelector("form").addEventListener("submit", submitTodo);
   addTodo();
 };
+
+window.removeTodo = removeTodo;
