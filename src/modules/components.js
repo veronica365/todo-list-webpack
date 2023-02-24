@@ -1,4 +1,4 @@
-import todos from './todos.js';
+import Todos from './todos.js';
 
 export const returnTodo = (task) => {
   const completed = task.completed ? ' completed' : '';
@@ -6,12 +6,10 @@ export const returnTodo = (task) => {
             <div class="item-wrapper">
                 <div class="todo">
                     <label class="todo-check">
-                        <input type="checkbox" checked="checked">
+                        <input type="checkbox" checked="${task.completed}">
                         <span class="checkmark"></span>
                     </label>
-                    <span class="todo-title">
-                        ${task.description}
-                    </span>
+                    <div class="todo-title" data-id=${task.index} contentEditable>${task.description}</div>
                 </div>
                 <div class="more">
                     <div class="move link">
@@ -27,7 +25,7 @@ export const returnTodo = (task) => {
                                 stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <div class="delete link" onclick="removeTodo(this)" id="${task.index}">
+                    <div class="delete link" onclick="removeTodo(this)" data-id="${task.index}">
                         <svg fill="#000000" height="25px" width="25px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60.167 60.167" xml:space="preserve">
                             <path d="M54.5,11.667H39.88V3.91c0-2.156-1.754-3.91-3.91-3.91H24.196c-2.156,0-3.91,1.754-3.91,3.91v7.756H5.667
@@ -46,7 +44,7 @@ export const returnTodo = (task) => {
 
 export const generateTodos = () => {
   let innerHTML = '';
-  todos.forEach((todo) => {
+  Todos.listData().forEach((todo) => {
     innerHTML += `${returnTodo(todo)}`;
   });
   return innerHTML;
