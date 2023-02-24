@@ -1,5 +1,5 @@
 export default class Todos {
-  static todo = "todos-todo-list-webpack";
+  static todo = 'todos-todo-list-webpack-veronica365';
 
   static setTodo(todos) {
     const newTodos = JSON.stringify(todos);
@@ -13,7 +13,7 @@ export default class Todos {
   }
 
   static listData() {
-    let todos = JSON.parse(localStorage.getItem(this.todo));
+    const todos = JSON.parse(localStorage.getItem(this.todo));
     return todos || [];
   }
 

@@ -50,8 +50,7 @@ export const generateTodos = () => {
   return innerHTML;
 };
 
-export const returnHead=()=>{
-    return `<div class="todo-head">
+export const returnHead = () => `<div class="todo-head">
                 <h1>Today's To Do</h1>
                 <span class="icon">
                     <svg width="25px" height="25px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
@@ -60,10 +59,8 @@ export const returnHead=()=>{
                     </svg>
                 </span>
             </div>`;
-}
 
-export const returnTodoForm=()=>{
-    return `<form class="add-task">
+export const returnTodoForm = () => `<form class="add-task">
                 <label>
                     <input type="text" placeholder="Add to your list..." />
                     <button type="submit" disabled class="link">
@@ -75,4 +72,3 @@ export const returnTodoForm=()=>{
                     </button>
                 </label>
             </form>`;
-}
