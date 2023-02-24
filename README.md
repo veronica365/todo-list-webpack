@@ -9,6 +9,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+    - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -40,7 +41,17 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Has functionality display a list of todos**
+- **Can display a list of todos**
+- **Can add a new item.**
+- **Can remove a selected item.**
+- **Can mark a selected item as complete.**
+- **Can remove all items marked as complete at once.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+-[Live Demo Link](https://veronica365.github.io/todo-list-webpack/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,10 +119,6 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Adding a new item.
-- [ ] Removing a selected item.
-- [ ] Marking a selected item as complete.
-- [ ] Removing all items marked as complete at once.
 - [ ] Reordering a selected item (as drag-and-drop) [as an additional feature].
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -100,6 +100,7 @@ h1 {
 
 .todos .add-task label input {
   padding-left: 15px;
+  font-style: italic;
 }
 
 .todos .todo-wrapper .todo-item {
@@ -116,6 +117,7 @@ h1 {
 
 .todo-item .todo {
   display: flex;
+  width: 100%;
 }
 
 .todo-item .todo .todo-check {
@@ -142,7 +144,14 @@ h1 {
 
 .todo-item .todo .todo-title {
   line-height: 25px;
-  padding: 12px 0;
+  padding-right: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  word-break: break-all;
+  outline: none;
+  min-height: 50px;
+  resize: none;
 }
 
 .todo-item.completed .todo .todo-title {
@@ -193,6 +202,10 @@ h1 {
   transform: rotate(45deg);
 }
 
-.todo-check input:checked ~ .checkmark::after {
+.todo-check input[checked="true"] {
+  background-color: green;
+}
+
+.todo-check input[checked="true"] ~ .checkmark::after {
   display: block;
 }
