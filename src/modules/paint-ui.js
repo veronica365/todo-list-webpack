@@ -48,13 +48,20 @@ export const removeTodo = (index) => {
 };
 
 /**
+ * Remove all the completed todos
+ */
+export const clearCompletedTodos = () => {
+  Todos.removeData('', true);
+  displayTodos();
+};
+
+/**
  * Remove all the completed todos when onlicking the button
  */
-const clearCompletedTodos = () => {
+const clearCompletedTodosLister = () => {
   const clear = document.querySelector('.todo-button');
   clear.addEventListener('click', () => {
-    Todos.removeData('', true);
-    displayTodos();
+    clearCompletedTodos();
   });
 };
 
@@ -95,7 +102,7 @@ const initialize = () => {
   document.querySelector('form').addEventListener('submit', createTodo);
   inputChange();
   displayTodos();
-  clearCompletedTodos();
+  clearCompletedTodosLister();
 };
 export default initialize;
 
