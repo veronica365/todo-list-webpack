@@ -155,7 +155,6 @@ h1 {
 }
 
 .todo-item.completed .todo .todo-title {
-  padding: 12px 0;
   line-height: 25px;
   color: var(--dark);
   text-decoration: line-through;
@@ -202,10 +201,6 @@ h1 {
   transform: rotate(45deg);
 }
 
-.todo-check input[checked="true"] {
-  background-color: green;
-}
-
-.todo-check input[checked="true"] ~ .checkmark::after {
+.todo-check input[checked] ~ .checkmark::after {
   display: block;
 }
