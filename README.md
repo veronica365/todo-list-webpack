@@ -122,6 +122,11 @@ You can deploy this project using:
 
 - GitHub: [@verocnica365](https://github.com/verocnica365)
 
+👤 **Author2**
+
+- GitHub: [Nicholas](https://github.com/atok624)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
