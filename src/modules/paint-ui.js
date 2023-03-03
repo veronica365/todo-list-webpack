@@ -28,7 +28,7 @@ const getTodoInput = () => document.querySelector('form input');
 /**
  * Add a new todo and update list
  */
-const addTodo = (description) => {
+export const addTodo = (description) => {
   const newTodo = {
     description,
     selected: false,
@@ -42,10 +42,8 @@ const addTodo = (description) => {
 /**
  * Remove a todo list and display the new list
  */
-const removeTodo = (event) => {
-  const article = event.parentElement.parentElement.parentElement;
-  article.remove();
-  Todos.removeData(event.getAttribute('data-id'));
+export const removeTodo = (index) => {
+  Todos.removeData(index);
   displayTodos();
 };
 

@@ -65,6 +65,7 @@ In order to run this project you need:
 
 - A [browser](https://www.google.com/search?q=what+is+a+browser&oq=what+is+a+browser&aqs=chrome..69i57.2748j0j1&sourceid=chrome&ie=UTF-8) of your choice
 - That you have set up Git on you desired computer
+- [NODEJS 16.10](https://nodejs.org/en) or higher
 
 ### Setup
 
@@ -98,6 +99,12 @@ To run tests to check the lint errors, run the following command:
   npx eslint . --fix
 ```
 
+To run unit tests, run the following command:
+
+```sh
+  npm test
+```
+
 ### Deployment
 
 You can deploy this project using:
@@ -114,6 +121,11 @@ You can deploy this project using:
 👤 **Author1**
 
 - GitHub: [@verocnica365](https://github.com/verocnica365)
+
+👤 **Author2**
+
+- GitHub: [Nicholas](https://github.com/atok624)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
